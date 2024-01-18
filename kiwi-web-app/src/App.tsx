@@ -21,7 +21,7 @@ function App() {
       <Box
         position="absolute"
         top="15px"
-        left="12px"
+        left="21px"
         width="58px"
         height="58px"
         borderRadius="full"
@@ -33,7 +33,7 @@ function App() {
       <Box
         position="absolute"
         top="6.5px"
-        left="4px"
+        left="13px"
         width="58px"
         height="58px"
         borderRadius="full"

@@ -16,7 +16,7 @@ const fontStyles = {
   fontFamily: "'Rubik Glitch', 'sans-serif', 'Lato', sans-serif",
 };
 
-const MenuItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+const MenuItem: React.FC<{ children: React.ReactNode, isMobile: boolean }> = ({ children, isMobile }) => (
   <Button 
     variant="link" 
     color="#FF8700" 
@@ -27,7 +27,7 @@ const MenuItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
       background: "linear-gradient(to top, white 1%, #FF8700 10%, white 89%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
-      fontFamily: "Rubik Glitch"
+      fontFamily: "Rubik Glitch",
     }}
   >
     {children}
@@ -44,19 +44,37 @@ const Navbar: React.FC = () => {
           <MenuButton
             as={IconButton}
             aria-label="Options"
-            icon={<HamburgerIcon boxSize={8} color="white" />}
+            icon={<HamburgerIcon boxSize={8} />}
+            color="white"
+            border= "2px solid #FF8700"
             variant="outline"
             position="absolute"
-            top={4}
+            top={7}
             right={4}
+            _hover={{
+              backgroundColor: "#1C1C1E",
+              border: "2px solid #FF8700",
+            }}
+            _active={{
+              backgroundColor: "#1C1C1E",
+              border: "2px solid #FF8700",
+            }}
           />
-          <MenuList>
+          <MenuList bg= "#1C1C1E">
             <Stack spacing={4} padding={4}> 
-              <MenuItem>WHAT</MenuItem>
-              <MenuItem>WHY</MenuItem>
-              <MenuItem>WHO</MenuItem>
-              <MenuItem>HOW</MenuItem>
+              <MenuItem isMobile={isMobile}>WHAT</MenuItem>
+              <MenuItem isMobile={isMobile}>WHY</MenuItem>
+              <MenuItem isMobile={isMobile}>WHO</MenuItem>
+              <MenuItem isMobile={isMobile}>HOW</MenuItem>
             </Stack>
+            <style>{`
+              :global(.chakra-menu__menuitem) {
+              _hover: {
+              borderColor: "#FF8700",
+              borderWidth: "2px",
+                }
+              }
+            `}</style>
           </MenuList>
         </Menu>
       ) : (
@@ -79,10 +97,10 @@ const Navbar: React.FC = () => {
         >
           <Box ml="auto" mr="auto">
             <Flex justifyContent="space-between">
-              <MenuItem>WHAT</MenuItem>
-              <MenuItem>WHY</MenuItem>
-              <MenuItem>WHO</MenuItem>
-              <MenuItem>HOW</MenuItem>
+              <MenuItem isMobile={!isMobile}>WHAT</MenuItem>
+              <MenuItem isMobile={!isMobile}>WHY</MenuItem>
+              <MenuItem isMobile={!isMobile}>WHO</MenuItem>
+              <MenuItem isMobile={!isMobile}>HOW</MenuItem>
             </Flex>
           </Box>
         </Flex>
