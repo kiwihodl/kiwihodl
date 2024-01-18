@@ -1,0 +1,327 @@
+[
+    {
+        "ID": 1,
+        "Category": "Education",
+        "Full_Name": "Erik Cason",
+        "Email": "dgrima0@smh.com.au",
+        "Verified": true,
+        "21Client": true,
+        "ThumbNail": "https://ibb.co/yg13bk7",
+        "ThumbNailAltDescription" : "Cartoon picture of Luke",
+        "ContentTitle": "Crypto-Sovereignty",
+        "ContentParagraph": "Crypto Sovereignty is not about crypto, it's about cryptography giving humanity an asymmetric way to defend themselves. Defence using an invisible network is not and inherently can not be violent.",
+        "Watch": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Listen": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Read": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Donate": "1BL8r9KC8GUZbUSYWZmTDNcxJK71sijdVT",
+        "Contact": "Vida_Link"
+      },
+
+      {
+        "ID": 2,
+        "Category": "HWW",
+        "Full_Name": "Erik Cason",
+        "Email": "dgrima0@smh.com.au",
+        "Verified": true,
+        "21Client": true,
+        "ThumbNail": "https://ibb.co/yg13bk7",
+        "ContentTitle": "Crypto-Sovereignty",
+        "ContentParagraph": "Crypto Sovereignty is not about crypto, it's about cryptography giving humanity an asymmetric way to defend themselves. Defence using an invisible network is not and inherently can not be violent.",
+        "Watch": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Listen": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Read": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Donate": "1BL8r9KC8GUZbUSYWZmTDNcxJK71sijdVT",
+        "Contact": "Vida_Link"
+      },
+    
+      {
+        "ID": 3,
+        "Full_Name": "Erik Cason",
+        "Email": "dgrima0@smh.com.au",
+        "Verified": true,
+        "21Client": true,
+        "ThumbNail": "https://ibb.co/yg13bk7",
+        "ContentTitle": "Crypto-Sovereignty",
+        "ContentParagraph": "Crypto Sovereignty is not about crypto, it's about cryptography giving humanity an asymmetric way to defend themselves. Defence using an invisible network is not and inherently can not be violent.",
+        "Watch": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Listen": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Read": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Donate": "1BL8r9KC8GUZbUSYWZmTDNcxJK71sijdVT",
+        "Contact": "Vida_Link"
+      },
+    
+      {
+        "ID": 5,
+        "Full_Name": "Erik Cason",
+        "Email": "dgrima0@smh.com.au",
+        "Verified": true,
+        "21Client": true,
+        "ThumbNail": "http://dummyimage.com/231x100.png/dddddd/000000",
+        "ContentTitle": "Crypto-Sovereignty",
+        "ContentParagraph": "Crypto Sovereignty is not about crypto, it's about cryptography giving humanity an asymmetric way to defend themselves. Defence using an invisible network is not and inherently can not be violent.",
+        "Watch": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Listen": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Read": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Donate": "1BL8r9KC8GUZbUSYWZmTDNcxJK71sijdVT",
+        "Contact": "Vida_Link"
+      },
+    
+      {
+        "ID": 7,
+        "Full_Name": "Erik Cason",
+        "Email": "dgrima0@smh.com.au",
+        "Verified": true,
+        "21Client": true,
+        "ThumbNail": "http://dummyimage.com/231x100.png/dddddd/000000",
+        "ContentTitle": "Crypto-Sovereignty",
+        "ContentParagraph": "Crypto Sovereignty is not about crypto, it's about cryptography giving humanity an asymmetric way to defend themselves. Defence using an invisible network is not and inherently can not be violent.",
+        "Watch": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Listen": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Read": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Donate": "1BL8r9KC8GUZbUSYWZmTDNcxJK71sijdVT",
+        "Contact": "Vida_Link"
+      },
+    
+    
+      {
+        "ID": 17,
+        "Full_Name": "Erik Cason",
+        "Email": "dgrima0@smh.com.au",
+        "Verified": true,
+        "21Client": true,
+        "ThumbNail": "http://dummyimage.com/231x100.png/dddddd/000000",
+        "ContentTitle": "Crypto-Sovereignty",
+        "ContentParagraph": "Crypto Sovereignty is not about crypto, it's about cryptography giving humanity an asymmetric way to defend themselves. Defence using an invisible network is not and inherently can not be violent.",
+        "Watch": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Listen": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Read": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Donate": "1BL8r9KC8GUZbUSYWZmTDNcxJK71sijdVT",
+        "Contact": "Vida_Link"
+      },
+    
+      {
+        "ID": 12,
+        "Full_Name": "Eric Cason",
+        "Email": "dgrima0@smh.com.au",
+        "Verified": true,
+        "21Client": true,
+        "ThumbNail": "http://dummyimage.com/231x100.png/dddddd/000000",
+        "ContentTitle": "Crypto-Sovereignty",
+        "ContentParagraph": "Crypto Sovereignty is not about crypto, it's about cryptography giving humanity an asymmetric way to defend themselves. Defence using an invisible network is not and inherently can not be violent.",
+        "Watch": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Listen": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Read": {
+          "Fiat_Platforms": {
+            "Spotify": "link",
+            "ApplePodcasts": "link"
+          },
+          "Bitcoin_Platforms": {
+            "Sphinx": "link",
+            "Fountain": "link",
+            "Breez": "link"
+          }
+        },
+        "Donate": "1BL8r9KC8GUZbUSYWZmTDNcxJK71sijdVT",
+        "Contact": "Vida_Link"
+      }
+]
