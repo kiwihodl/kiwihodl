@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
             border= "2px solid #FF8700"
             variant="outline"
             position="absolute"
-            top={7}
+            top={6}
             right={4}
             _hover={{
               backgroundColor: "#1C1C1E",
