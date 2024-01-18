@@ -28,6 +28,7 @@ const MenuItem: React.FC<{ children: React.ReactNode, isMobile: boolean }> = ({ 
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       fontFamily: "Rubik Glitch",
+      paddingTop: "3px",
     }}
   >
     {children}
@@ -46,6 +47,7 @@ const Navbar: React.FC = () => {
             aria-label="Options"
             icon={<HamburgerIcon boxSize={8} />}
             color="white"
+            backgroundColor="#1C1C1E"
             border= "2px solid #FF8700"
             variant="outline"
             position="absolute"
@@ -53,28 +55,17 @@ const Navbar: React.FC = () => {
             right={4}
             _hover={{
               backgroundColor: "#1C1C1E",
-              border: "2px solid #FF8700",
             }}
             _active={{
               backgroundColor: "#1C1C1E",
-              border: "2px solid #FF8700",
             }}
           />
           <MenuList bg= "#1C1C1E">
             <Stack spacing={4} padding={4}> 
-              <MenuItem isMobile={isMobile}>WHAT</MenuItem>
-              <MenuItem isMobile={isMobile}>WHY</MenuItem>
-              <MenuItem isMobile={isMobile}>WHO</MenuItem>
-              <MenuItem isMobile={isMobile}>HOW</MenuItem>
+              <MenuItem isMobile={isMobile}>Donate</MenuItem>
+              <MenuItem isMobile={isMobile}>Learn</MenuItem>
+              <MenuItem isMobile={isMobile}>Contact</MenuItem>
             </Stack>
-            <style>{`
-              :global(.chakra-menu__menuitem) {
-              _hover: {
-              borderColor: "#FF8700",
-              borderWidth: "2px",
-                }
-              }
-            `}</style>
           </MenuList>
         </Menu>
       ) : (
@@ -96,11 +87,10 @@ const Navbar: React.FC = () => {
           }}
         >
           <Box ml="auto" mr="auto">
-            <Flex justifyContent="space-between">
-              <MenuItem isMobile={!isMobile}>WHAT</MenuItem>
-              <MenuItem isMobile={!isMobile}>WHY</MenuItem>
-              <MenuItem isMobile={!isMobile}>WHO</MenuItem>
-              <MenuItem isMobile={!isMobile}>HOW</MenuItem>
+            <Flex justifyContent="space-between" width="21rem">
+              <MenuItem isMobile={!isMobile}>Donate</MenuItem>
+              <MenuItem isMobile={!isMobile}>Learn</MenuItem>
+              <MenuItem isMobile={!isMobile}>Contact</MenuItem>
             </Flex>
           </Box>
         </Flex>
