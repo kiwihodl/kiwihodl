@@ -20,10 +20,10 @@ function App() {
     <ChakraProvider theme={theme}>
       <Box
         position="absolute"
-        top="15px"
+        top="13px"
         left="21px"
-        width="58px"
-        height="58px"
+        width="60px"
+        height="60px"
         borderRadius="full"
         bgGradient="linear(to bottom right, #FF8700, #ffbf00, #ffcf40, #ffffff)"
         animation={`${rotate} 5s linear infinite`}
@@ -32,8 +32,8 @@ function App() {
 
       <Box
         position="absolute"
-        top="6.5px"
-        left="13px"
+        top="6px"
+        left="14px"
         width="58px"
         height="58px"
         borderRadius="full"
