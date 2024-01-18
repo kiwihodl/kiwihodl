@@ -46,11 +46,11 @@ const CardCarousel = () => {
 };
 
     return (
-        <Flex width="full" align="center" justifyContent="center">
+        <Flex width="full" align="center" justifyContent="center" mt={20}>
             <Button onClick={handlePrev} leftIcon={<ChevronLeftIcon />} m={1}>
                 Prev
             </Button>
-            <Box width="full" p={4}>
+            <Box width="full" p={4} display="flex" justifyContent="center">
                 <Card user={user} />
             </Box>
             <Button onClick={handleNext} rightIcon={<ChevronRightIcon />} m={1}>

@@ -2,6 +2,8 @@ import './App.css';
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./Utils/theme";
 import Nav from "./Components/Navbar/Navbar"
+import CardCarousel from './Components/Education/Carousel/Carousel';
+
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import Logo from "./Assets/Logo.jpg"
@@ -60,6 +62,7 @@ function App() {
       </Box>
 
       <Nav /> 
+      <CardCarousel />
     </ChakraProvider>
   );
 }
