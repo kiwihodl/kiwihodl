@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
-    <Box position="sticky" top="21px" zIndex="1" mt="21px">
+    <Box position="sticky" top="23px" zIndex="1" mt="21px">
       {isMobile ? (
         <Menu>
           <MenuButton
