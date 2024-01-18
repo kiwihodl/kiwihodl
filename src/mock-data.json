@@ -2,14 +2,14 @@
     {
         "ID": 1,
         "Category": "Education",
-        "Full_Name": "Erik Cason",
+        "Full_Name": "KiwiHodl",
         "Email": "dgrima0@smh.com.au",
         "Verified": true,
         "21Client": true,
         "ThumbNail": "https://ibb.co/yg13bk7",
         "ThumbNailAltDescription" : "Cartoon picture of Luke",
-        "ContentTitle": "Crypto-Sovereignty",
-        "ContentParagraph": "Crypto Sovereignty is not about crypto, it's about cryptography giving humanity an asymmetric way to defend themselves. Defence using an invisible network is not and inherently can not be violent.",
+        "ContentTitle": "Why Bother",
+        "ContentParagraph": "Your time is the most important asset, without it you can no longer make any changes. Spend it wisely, learn about money which represents your time spent, or you are wasting it.",
         "Watch": {
           "Fiat_Platforms": {
             "Spotify": "link",

@@ -51,7 +51,7 @@ const inactiveStyle = {
 };
 
 const CardStructure = ({ user }: { user: User }) => {
-  const card_ID = MockData[0].ID;
+  //   const card_ID = MockData[0].ID;
   const buttons = ["Read", "Listen", "Watch"];
   const [activeButtons, setActiveButtons] = useState<number[]>([]);
 
@@ -62,20 +62,6 @@ const CardStructure = ({ user }: { user: User }) => {
       setActiveButtons([...activeButtons, index]);
     }
   };
-
-  function generateLinks(data: Platform | BitcoinPlatform) {
-    const anchorLinks: JSX.Element[] = [];
-
-    for (const [key, value] of Object.entries(data)) {
-      anchorLinks.push(
-        <a href={value.toString() || "#"} key={key}>
-          {key}
-        </a>
-      );
-    }
-
-    return anchorLinks;
-  }
 
   const generatePlatformIcons = (platforms: Platform | BitcoinPlatform) => {
     return Object.keys(platforms).map((platform) => {
@@ -116,7 +102,7 @@ const CardStructure = ({ user }: { user: User }) => {
         border="2px solid #FF8700"
         borderRadius="25px"
         p={4}
-        height={800}
+        height={720}
         width={1500}
         zIndex={2}
       >
@@ -126,21 +112,13 @@ const CardStructure = ({ user }: { user: User }) => {
           alignItems="center"
           justifyContent="center"
         >
-          <Box className="21Logo">
-            <Image
-              src={Kiwi}
-              alt="21 Websites logo of a shield and lightning bolt"
-              className="CardLogo"
-              width={10}
-              height={10}
-            />
+          <Box >
+            <Heading>
+                {user.Full_Name}
+            </Heading>
           </Box>
-          <Box className="SpacerDiv" />
-          <Box display="flex" alignItems="center" justifyContent="center">
-            <Heading className="AuthorName">{user.Full_Name}</Heading>
-          </Box>
-          <Box className="SpacerDiv" />
         </Flex>
+
         <Box className="CardBg">
           <Box className="CardInner">
             <Box
@@ -148,7 +126,7 @@ const CardStructure = ({ user }: { user: User }) => {
               display="flex"
               alignItems="center"
               justifyContent="center"
-              padding={5}
+              padding={3}
             >
               <Image
                 src={Kiwi}
@@ -158,27 +136,15 @@ const CardStructure = ({ user }: { user: User }) => {
                 height={60}
               />
             </Box>
-            <Box className="ContentTitleDiv" padding={3}>
+            <Box className="ContentTitleDiv" padding="3px" display="flex"
+                justifyContent="center"
+                alignContent="center">
               <Heading className="ContentTitleText">
                 {user.ContentTitle}
               </Heading>
             </Box>
-            <Box className="ContentDescription">
+            <Box className="ContentDescription" padding={2}>
               <Text className="ContentParagraph">{user.ContentParagraph}</Text>
-            </Box>
-            <Box className="ContentBars" zIndex={5}>
-              <Box className="ListenUnderlying">
-                <Box className="FiatBar">
-                </Box>
-              </Box>
-              <Box className="WatchUnderlying">
-                <Box className="FiatBar">
-                  {/* {generateLinks(user.Watch.Fiat_Platforms)} */}
-                </Box>
-                <Box className="BitcoinBar">
-                  {/* {generateLinks(user.Watch.Bitcoin_Platforms)} */}
-                </Box>
-              </Box>
             </Box>
 
             <Box
@@ -189,116 +155,115 @@ const CardStructure = ({ user }: { user: User }) => {
               gap="8px"
               zIndex={4}
             >
-            <Box>
-              <Button
-                className={`ReadButton ${
-                  activeButtons.includes(0) ? "active" : ""
-                }`}
-                onClick={() => handleButtonClick(0)}
-                style={activeButtons.includes(0) ? activeStyle : inactiveStyle}
-                width="100%"
-                zIndex={4}
-              >
-                <Box className="button-container">
+              <Box>
+                <Button
+                  className={`ReadButton ${
+                    activeButtons.includes(0) ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick(0)}
+                  style={
+                    activeButtons.includes(0) ? activeStyle : inactiveStyle
+                  }
+                  width="100%"
+                  zIndex={4}
+                >
                   <Text>Read</Text>
-                </Box>
-              </Button>
-              <Flex
+                </Button>
+                <Flex
                   direction="row"
                   position="relative"
                   marginTop="-40px"
-                  width="300px"
-                  height="50px"
+                  width="350px"
+                  height="39px"
                   zIndex={2}
                 >
                   <Box
                     width="50%"
                     height="100%"
                     backgroundColor="#FF8700"
-                    borderRadius="25px 0 0 25px"
+                    borderRadius="5px 0 0 5px"
                   />
                   <Box width="50%" height="100%" backgroundColor="green" />
                 </Flex>
               </Box>
 
-              <Box>
-  <Button
-    className={`ListenButton ${
-      activeButtons.includes(1) ? "active" : ""
-    }`}
-    onClick={() => handleButtonClick(1)}
-    style={activeButtons.includes(1) ? activeStyle : inactiveStyle}
-    width="100%"
-    zIndex={4}
-  >
-    <Box className="button-container">
-      <Text>Listen</Text>
-    </Box>
-  </Button>
-  <Flex
-    direction="row"
-    position="relative"
-    marginTop="-40px"
-    width="300px"
-    height="50px"
-    zIndex={2}
-  >
-    <Box
-      width="50%"
-      height="100%"
-      backgroundColor="#FF8700"
-      borderRadius="25px 0 0 25px"
-    >
-      <Flex className="FiatItemsDiv">
-        {generatePlatformIcons(user.Listen.Fiat_Platforms)}
-      </Flex>
-    </Box>
-    <Box width="50%" height="100%" backgroundColor="green">
-      <Flex className="BitcoinContentItems">
-        {generatePlatformIcons(user.Listen.Bitcoin_Platforms)}
-      </Flex>
-    </Box>
-  </Flex>
-</Box>
-    
-                    <Box>
-
-              <Button
-                className={`WatchButton ${
-                  activeButtons.includes(2) ? "active" : ""
-                }`}
-                onClick={() => handleButtonClick(2)}
-                style={activeButtons.includes(2) ? activeStyle : inactiveStyle}
-                width="100%"
-                zIndex={4}
-              >
-                <Box className="button-container">
-                  <Text>Watch</Text>
-                </Box>
-              </Button>
-              <Flex
+              <Box marginTop={1}>
+                <Button
+                  className={`ListenButton ${
+                    activeButtons.includes(1) ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick(1)}
+                  style={
+                    activeButtons.includes(1) ? activeStyle : inactiveStyle
+                  }
+                  width="100%"
+                  zIndex={4}
+                >
+                    <Text>Listen</Text>
+                </Button>
+                <Flex
                   direction="row"
                   position="relative"
                   marginTop="-40px"
-                  width="300px"
-                  height="50px"
+                  width="350px"
+                  height="39px"
                   zIndex={2}
                 >
                   <Box
                     width="50%"
                     height="100%"
                     backgroundColor="#FF8700"
-                    borderRadius="25px 0 0 25px"
+                    borderRadius="5px 0 0 5px"
+                  >
+                    <Flex className="FiatItemsDiv">
+                      {generatePlatformIcons(user.Listen.Fiat_Platforms)}
+                    </Flex>
+                  </Box>
+                  <Box width="50%" height="100%" backgroundColor="green">
+                    <Flex className="BitcoinContentItems">
+                      {generatePlatformIcons(user.Listen.Bitcoin_Platforms)}
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+
+              <Box marginTop={1}>
+                <Button
+                  className={`WatchButton ${
+                    activeButtons.includes(2) ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick(2)}
+                  style={
+                    activeButtons.includes(2) ? activeStyle : inactiveStyle
+                  }
+                  width="100%"
+                  zIndex={4}
+                >
+                    <Text>Watch</Text>
+                </Button>
+                <Flex
+                  direction="row"
+                  position="relative"
+                  marginTop="-40px"
+                  width="350px"
+                  height="39px"
+                  zIndex={2}
+                >
+                  <Box
+                    width="50%"
+                    height="100%"
+                    backgroundColor="#FF8700"
+                    borderRadius="5px 0 0 5px"
                   />
                   <Box width="50%" height="100%" backgroundColor="green" />
                 </Flex>
+              </Box>
             </Box>
-            </Box>
-
           </Box>
         </Box>
-        <Box className="LowerBar">
-          <Box className="DonateContactButtons">
+
+        <Box className="LowerBar" marginTop={5}>
+          <Box className="DonateContactButtons" display="flex" justifyContent="space-evenly">
             <Button className="DonateButton">DONATE</Button>
             <Button className="ContactButton">CONTACT</Button>
           </Box>
