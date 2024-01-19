@@ -58,6 +58,8 @@ const CardCarousel = () => {
           border="none"
           color="#FF8700"
           marginTop="400px"
+          _hover={{ bg: "transparent" }}
+          _active={{ bg: "transparent" }}
         ></Button>
       )}
       <Box width="full" p={4} display="flex" justifyContent="center">
@@ -72,6 +74,8 @@ const CardCarousel = () => {
           border="none"
           color="#FF8700"
           marginTop="400px"
+          _hover={{ bg: "transparent" }}
+          _active={{ bg: "transparent" }}
         ></Button>
       )}
     </Flex>
