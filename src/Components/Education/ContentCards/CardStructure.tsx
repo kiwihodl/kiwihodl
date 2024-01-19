@@ -7,24 +7,24 @@ import Kiwi from "../../../Assets/Logo.jpg";
 import Fountain from "../../../Assets/fountain.jpg";
 import Sphinx from "../../../Assets/sphinx.jpg";
 
-interface Platform {
-  Spotify: string;
-  ApplePodcasts: string;
-}
-
-interface BitcoinPlatform extends Platform {
-  Sphinx: string;
-  Fountain: string;
-  Breez: string;
-}
-
-interface Content {
-  Fiat_Platforms: Platform;
-  Bitcoin_Platforms: BitcoinPlatform;
-}
-
+interface FiatPlatform {
+    Spotify: string;
+    ApplePodcasts: string;
+  }
+  
+  interface BitcoinPlatform {
+    Sphinx: string;
+    Fountain: string;
+    Breez: string;
+  }
+  
+  interface Content {
+    Fiat_Platforms: FiatPlatform;
+    Bitcoin_Platforms: BitcoinPlatform;
+  }
 interface User {
   ID: number;
+  User: string; 
   Category: string;
   Full_Name: string;
   Email: string;
@@ -63,17 +63,19 @@ const CardStructure = ({ user }: { user: User }) => {
     }
   };
 
-  const generatePlatformIcons = (platforms: Platform | BitcoinPlatform) => {
+  const generatePlatformIcons = (platforms: FiatPlatform | BitcoinPlatform) => {
     return Object.keys(platforms).map((platform) => {
       let icon;
       switch (platform) {
         case "Spotify":
+        case "ApplePodcasts":
           icon = <FontAwesomeIcon icon={faSpotify} size="lg" />;
           break;
         case "Sphinx":
           icon = <Image src={Sphinx} width={8} height={8} />;
           break;
         case "Fountain":
+        case "Breez":
           icon = <Image src={Fountain} width={8} height={8} />;
           break;
         default:
@@ -143,7 +145,7 @@ const CardStructure = ({ user }: { user: User }) => {
                 {user.ContentTitle}
               </Heading>
             </Box>
-            <Box className="ContentDescription" padding={2}>
+            <Box className="ContentDescription" padding={2} mb={4}>
               <Text className="ContentParagraph">{user.ContentParagraph}</Text>
             </Box>
 
