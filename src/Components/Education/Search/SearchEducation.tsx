@@ -45,7 +45,7 @@ const SearchEducation: React.FC<SearchEducationProps> = ({ children }) => {
           </Box>
         </Flex>
         <Box marginLeft="1rem">
-          <AddContent trigger={trigger} setTrigger={setTrigger}>{}</AddContent>
+          <AddContent trigger={trigger} setTrigger={setTrigger} />
         </Box>
       </Flex>
       {children}
