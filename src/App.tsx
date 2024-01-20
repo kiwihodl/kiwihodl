@@ -1,7 +1,9 @@
 import './App.css';
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, useBreakpointValue } from "@chakra-ui/react";
 import theme from "./Utils/theme";
 import Nav from "./Components/Navbar/Navbar"
+import CardCarousel from './Components/Education/Carousel/Carousel';
+
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 import Logo from "./Assets/Logo.jpg"
@@ -20,7 +22,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Box
         position="absolute"
-        top="13px"
+        top={{ base: "-55px", md: "13px" }}
         left="21px"
         width="60px"
         height="60px"
@@ -32,7 +34,7 @@ function App() {
 
       <Box
         position="absolute"
-        top="6px"
+        top={{ base: "-62px", md: "6px" }}
         left="14px"
         width="58px"
         height="58px"
@@ -60,6 +62,7 @@ function App() {
       </Box>
 
       <Nav /> 
+      <CardCarousel />
     </ChakraProvider>
   );
 }

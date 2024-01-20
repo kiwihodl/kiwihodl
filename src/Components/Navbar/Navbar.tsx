@@ -39,19 +39,19 @@ const Navbar: React.FC = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
-    <Box position="sticky" top="23px" zIndex="1" mt="21px">
+    <Box top="23px" zIndex={8} mt="15px">
       {isMobile ? (
         <Menu>
           <MenuButton
             as={IconButton}
             aria-label="Options"
-            icon={<HamburgerIcon boxSize={8} />}
+            icon={<HamburgerIcon boxSize={8}/>}
             color="white"
             backgroundColor="#1C1C1E"
             border= "2px solid #FF8700"
             variant="outline"
             position="absolute"
-            top={6}
+            top={-12}
             right={4}
             _hover={{
               backgroundColor: "#1C1C1E",
@@ -71,6 +71,7 @@ const Navbar: React.FC = () => {
       ) : (
         <Flex
           as="nav"
+          position="sticky"
           px={4}
           py={2}
           align="center"
