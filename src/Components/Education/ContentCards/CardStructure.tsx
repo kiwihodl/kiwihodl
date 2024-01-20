@@ -2,7 +2,6 @@ import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpotify } from "@fortawesome/free-brands-svg-icons";
-import MockData from "../../../mock-data.json";
 import Kiwi from "../../../Assets/Logo.jpg";
 import Fountain from "../../../Assets/fountain.jpg";
 import Sphinx from "../../../Assets/sphinx.jpg";
@@ -151,7 +150,7 @@ const CardStructure = ({ user }: { user: User }) => {
         border="2px solid #FF8700"
         borderRadius="25px"
         p={4}
-        height={720}
+        height={660}
         width={1500}
         zIndex={2}
         bg="black"
@@ -314,18 +313,7 @@ const CardStructure = ({ user }: { user: User }) => {
             </Box>
           </Box>
         </Box>
-
-        <Box className="LowerBar" marginTop={5}>
-          <Box
-            className="DonateContactButtons"
-            display="flex"
-            justifyContent="space-evenly"
-          >
-            <Button className="DonateButton">DONATE</Button>
-            <Button className="ContactButton">CONTACT</Button>
-          </Box>
         </Box>
-      </Box>
     </Box>
   );
 };
