@@ -5,6 +5,7 @@ import theme from "./Utils/theme";
 import Nav from "./Components/Navbar/Navbar"
 import ContentSearch from "./Components/Education/Search/SearchEducation"
 import CardCarousel from './Components/Education/Carousel/Carousel';
+import Education from './Components/Education/Education'
 
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
@@ -65,8 +66,9 @@ function App() {
       </Box>
 
       <Nav /> 
-      <ContentSearch />
-      <CardCarousel />
+      {/* <ContentSearch />
+      <CardCarousel /> */}
+      <Education />
     </ChakraProvider>
   );
 }
