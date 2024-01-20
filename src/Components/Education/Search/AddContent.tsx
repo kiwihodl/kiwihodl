@@ -54,7 +54,7 @@ const AddContent: React.FC<AddContentProps> = (props) => {
                             <Button colorScheme="teal" color="black" onClick={() => setLoginMethod('email')}>Login with Email</Button>
                             <Button colorScheme="teal" color="black" onClick={() => setLoginMethod('signup')}>Sign Up</Button>
                         </VStack>
-                        {loginMethod === 'email' && (
+                        {loginMethod === 'email' || loginMethod === 'signup' ? (
                             <Box pt={4} pb={4}>
                                 <Input 
                                     placeholder="Email" 
@@ -77,7 +77,7 @@ const AddContent: React.FC<AddContentProps> = (props) => {
                                 />
                                 <Button type="submit" colorScheme="teal" color="black" mt={2}>Submit</Button>
                             </Box>
-                        )}
+                        ) : null}
                         {loading && <p>Loading...</p>}
                         {error && <p>Error: {error.message}</p>}
                     </Flex>
