@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { LOGIN_MUTATION } from '../../../GraphQL/Mutations/authMutations'; 
 import { Box, Button, Modal, ModalOverlay, ModalContent, ModalCloseButton, Icon, Text, Flex, Heading, Input, VStack } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
 
@@ -9,6 +11,32 @@ interface AddContentProps {
 
 const AddContent: React.FC<AddContentProps> = (props) => {
     const [loginMethod, setLoginMethod] = React.useState<string | null>(null);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const [login, { loading, error }] = useMutation(LOGIN_MUTATION, {
+        onCompleted: (data) => {
+            console.log('Login Successful', data);
+        },
+        onError: (error) => {
+            console.error('Login Error', error.message);
+        },
+    });
+
+    const handleLogin = async (e: React.FormEvent) => {
+        e.preventDefault();
+        try {
+            await login({
+                variables: { email, password },
+            });
+        } catch (error) {
+            if (error instanceof Error) {
+                console.error('Login Mutation Error', error.message);
+            } else {
+                console.error('Login Mutation Error', error);
+            }
+        }
+    };
 
     return (
         <>
@@ -19,7 +47,7 @@ const AddContent: React.FC<AddContentProps> = (props) => {
                 <ModalOverlay />
                 <ModalContent backgroundColor="black" border="1px solid #FF8700">
                     <ModalCloseButton />
-                    <Flex direction="column" p={4} textAlign="center" justifyContent="center">
+                    <Flex as="form" direction="column" p={4} textAlign="center" justifyContent="center" onSubmit={handleLogin}>
                         <Heading mb={4}>Sign In or Up</Heading>
                         <VStack spacing={2} mb={4}>
                             <Button colorScheme="teal" onClick={() => setLoginMethod('lnurl')}>Login with LNURL</Button>
@@ -28,10 +56,13 @@ const AddContent: React.FC<AddContentProps> = (props) => {
                         </VStack>
                         {loginMethod === 'email' && (
                             <>
-                                <Input placeholder="Email" mb={2} />
-                                <Input placeholder="Password" />
+                                <Input placeholder="Email" mb={2} value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <Input placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                <Button type="submit" colorScheme="teal" mt={2}>Submit</Button>
                             </>
                         )}
+                        {loading && <p>Loading...</p>}
+                        {error && <p>Error: {error.message}</p>}
                     </Flex>
                 </ModalContent>
             </Modal>
