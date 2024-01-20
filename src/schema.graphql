@@ -1,0 +1,39 @@
+type PlatformLinks {
+  Spotify: String
+  ApplePodcasts: String
+  Sphinx: String
+  Fountain: String
+  Breez: String
+}
+
+type Platforms {
+  Fiat: PlatformLinks
+  Bitcoin: PlatformLinks
+}
+
+type Content {
+  ContentTitle: String
+  ContentParagraph: String
+  Watch: Platforms
+  Listen: Platforms
+  Read: Platforms
+}
+
+type User {
+  ID: ID!
+  User: String
+  Category: String
+  Full_Name: String
+  Email: String
+  Verified: Boolean
+  _21Client: Boolean
+  ThumbNail: String
+  ThumbNailAltDescription: String
+  Content: Content
+  Donate: String
+  Contact: String
+}
+
+type Query {
+  users: [User]
+}

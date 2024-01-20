@@ -1,10 +1,8 @@
 import './App.css';
-import React, { useState } from 'react';
-import { ChakraProvider, useBreakpointValue } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { ApolloWrapper } from "./Apollo"
 import theme from "./Utils/theme";
 import Nav from "./Components/Navbar/Navbar"
-import ContentSearch from "./Components/Education/Search/SearchEducation"
-import CardCarousel from './Components/Education/Carousel/Carousel';
 import Education from './Components/Education/Education'
 
 import { Box, Flex, Image } from "@chakra-ui/react";
@@ -24,6 +22,7 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
+      <ApolloWrapper>
       <Box
         position="absolute"
         top={{ base: "-55px", md: "13px" }}
@@ -66,9 +65,8 @@ function App() {
       </Box>
 
       <Nav /> 
-      {/* <ContentSearch />
-      <CardCarousel /> */}
       <Education />
+      </ApolloWrapper>
     </ChakraProvider>
   );
 }
