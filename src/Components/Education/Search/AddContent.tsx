@@ -45,21 +45,38 @@ const AddContent: React.FC<AddContentProps> = (props) => {
             </Button>
             <Modal isOpen={props.trigger} onClose={() => props.setTrigger(false)}>
                 <ModalOverlay />
-                <ModalContent backgroundColor="black" border="1px solid #FF8700">
+                <ModalContent backgroundColor="black" border="1px solid #FF8700" p={4}>
                     <ModalCloseButton />
                     <Flex as="form" direction="column" p={4} textAlign="center" justifyContent="center" onSubmit={handleLogin}>
                         <Heading mb={4}>Sign In or Up</Heading>
-                        <VStack spacing={2} mb={4}>
-                            <Button colorScheme="teal" onClick={() => setLoginMethod('lnurl')}>Login with LNURL</Button>
-                            <Button colorScheme="teal" onClick={() => setLoginMethod('email')}>Login with Email</Button>
-                            <Button colorScheme="teal" onClick={() => setLoginMethod('signup')}>Sign Up</Button>
+                        <VStack spacing={2} mb={4} mt={4}>
+                            <Button colorScheme="teal" color="black" onClick={() => setLoginMethod('lnurl')}>Login with LNURL</Button>
+                            <Button colorScheme="teal" color="black" onClick={() => setLoginMethod('email')}>Login with Email</Button>
+                            <Button colorScheme="teal" color="black" onClick={() => setLoginMethod('signup')}>Sign Up</Button>
                         </VStack>
                         {loginMethod === 'email' && (
-                            <>
-                                <Input placeholder="Email" mb={2} value={email} onChange={(e) => setEmail(e.target.value)} />
-                                <Input placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                <Button type="submit" colorScheme="teal" mt={2}>Submit</Button>
-                            </>
+                            <Box pt={4} pb={4}>
+                                <Input 
+                                    placeholder="Email" 
+                                    mb={2} 
+                                    value={email} 
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    _hover={{ borderColor: "#FF8700" }}
+                                    _focus={{ borderColor: "#FF8700" }}
+                                    color="#FF8700"
+                                    _placeholder={{ color: "#FF8700" }}
+                                />
+                                <Input 
+                                    placeholder="Password" 
+                                    value={password} 
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    _hover={{ borderColor: "#FF8700" }}
+                                    _focus={{ borderColor: "#FF8700" }}
+                                    color="#FF8700"
+                                    _placeholder={{ color: "#FF8700" }}
+                                />
+                                <Button type="submit" colorScheme="teal" color="black" mt={2}>Submit</Button>
+                            </Box>
                         )}
                         {loading && <p>Loading...</p>}
                         {error && <p>Error: {error.message}</p>}
