@@ -1,29 +1,48 @@
-import { Box, Button, Input, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from "@chakra-ui/react";
+import { Box, Button, Input, Flex, Select } from "@chakra-ui/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 interface AddContentProps {
-  isOpen: boolean;
-  onClose: () => void;
   children?: React.ReactNode;
 }
 
-const AddContent: React.FC<AddContentProps> = ({ isOpen, onClose, children }) => {
+const AddContent: React.FC<AddContentProps> = ({ children }) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
-      <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>Add Content</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>
-          {children}
-        </ModalBody>
-        <ModalFooter>
-          <Button colorScheme="blue" mr={3} onClick={onClose}>
-            Close
-          </Button>
-          <Button variant="ghost">Secondary Action</Button>
-        </ModalFooter>
-      </ModalContent>
-    </Modal>
+    <Box mt={10}>
+      <Flex align="center" justify="center">
+      <Select
+        width="200px" 
+        height="50px" 
+        iconColor="black" 
+        backgroundColor="#FF8700"
+        color="black"
+        borderRadius="25px 0px 0px 25px"
+        border="1px solid black"
+        textAlign="center"
+        focusBorderColor="transparent"
+        errorBorderColor="transparent"
+        variant="unstyled"
+      >
+          <option value="" hidden>Filter</option>
+          <option value="a">Author</option>
+          <option value="b">Title</option>
+          <option value="c">Topic</option>
+        </Select>
+        <Flex align="center" position="relative" marginLeft="-1px">
+          <Input placeholder="Search..." height="47px" sx={{
+            borderRadius: "0px 25px 25px 0px",
+            ':focus': {
+              borderColor: "#FF8700",
+              boxShadow: "0 0 0 1px #FF8700"
+            }
+          }}/>
+          <Box as="span" position="absolute" right="1rem" top="50%" transform="translateY(-50%)">
+            <FontAwesomeIcon icon={faSearch} />
+          </Box>
+        </Flex>
+      </Flex>
+      {children}
+    </Box>
   );
 };
 

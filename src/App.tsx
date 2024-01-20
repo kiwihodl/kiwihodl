@@ -1,7 +1,9 @@
 import './App.css';
+import React, { useState } from 'react';
 import { ChakraProvider, useBreakpointValue } from "@chakra-ui/react";
 import theme from "./Utils/theme";
 import Nav from "./Components/Navbar/Navbar"
+import ContentSearch from "./Components/Education/Search/SearchEducation"
 import CardCarousel from './Components/Education/Carousel/Carousel';
 
 import { Box, Flex, Image } from "@chakra-ui/react";
@@ -18,6 +20,7 @@ const rotate = keyframes`
 `;
 
 function App() {
+
   return (
     <ChakraProvider theme={theme}>
       <Box
@@ -62,6 +65,7 @@ function App() {
       </Box>
 
       <Nav /> 
+      <ContentSearch />
       <CardCarousel />
     </ChakraProvider>
   );

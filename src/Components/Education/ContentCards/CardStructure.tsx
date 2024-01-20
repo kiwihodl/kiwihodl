@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpotify } from "@fortawesome/free-brands-svg-icons";
 import MockData from "../../../mock-data.json";
@@ -8,23 +8,23 @@ import Fountain from "../../../Assets/fountain.jpg";
 import Sphinx from "../../../Assets/sphinx.jpg";
 
 interface FiatPlatform {
-    Spotify: string;
-    ApplePodcasts: string;
-  }
-  
-  interface BitcoinPlatform {
-    Sphinx: string;
-    Fountain: string;
-    Breez: string;
-  }
-  
-  interface Content {
-    Fiat_Platforms: FiatPlatform;
-    Bitcoin_Platforms: BitcoinPlatform;
-  }
+  Spotify: string;
+  ApplePodcasts: string;
+}
+
+interface BitcoinPlatform {
+  Sphinx: string;
+  Fountain: string;
+  Breez: string;
+}
+
+interface Content {
+  Fiat_Platforms: FiatPlatform;
+  Bitcoin_Platforms: BitcoinPlatform;
+}
 interface User {
   ID: number;
-  User: string; 
+  User: string;
   Category: string;
   Full_Name: string;
   Email: string;
@@ -50,18 +50,64 @@ const inactiveStyle = {
   transition: "transform 2s",
 };
 
+const buttonStyles = {
+  width: "100%",
+  height: "40px",
+  borderRadius: "5px",
+  backgroundColor: "#1C1C1E",
+  color: "#FF8700",
+  fontWeight: "bold",
+  fontSize: "18px",
+  border: "1px solid white",
+  zIndex: 4,
+  _hover: {
+    borderColor: "#FF8700",
+    backgroundColor: "#1C1C1E",
+  },
+  _active: {
+    borderColor: "#FF8700",
+    backgroundColor: "#1C1C1E",
+  },
+};
+
 const CardStructure = ({ user }: { user: User }) => {
   //   const card_ID = MockData[0].ID;
   const buttons = ["Read", "Listen", "Watch"];
   const [activeButtons, setActiveButtons] = useState<number[]>([]);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const readButtonRef = useRef<HTMLButtonElement>(null);
+  const listenButtonRef = useRef<HTMLButtonElement>(null);
+  const watchButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleButtonClick = (index: number) => {
     if (activeButtons.includes(index)) {
-      setActiveButtons(activeButtons.filter((i) => i !== index));
+      setActiveButtons([]);
     } else {
-      setActiveButtons([...activeButtons, index]);
+      setActiveButtons([index]);
     }
   };
+
+  const handleClickOutside = (event: any) => {
+    if (
+      cardRef.current &&
+      !cardRef.current.contains(event.target) &&
+      readButtonRef.current &&
+      !readButtonRef.current.contains(event.target) &&
+      listenButtonRef.current &&
+      !listenButtonRef.current.contains(event.target) &&
+      watchButtonRef.current &&
+      !watchButtonRef.current.contains(event.target)
+    ) {
+      setActiveButtons([]);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const generatePlatformIcons = (platforms: FiatPlatform | BitcoinPlatform) => {
     return Object.keys(platforms).map((platform) => {
@@ -91,6 +137,7 @@ const CardStructure = ({ user }: { user: User }) => {
 
   return (
     <Box
+      ref={cardRef}
       className="CardsMain"
       display="flex"
       justifyContent="center"
@@ -107,6 +154,7 @@ const CardStructure = ({ user }: { user: User }) => {
         height={720}
         width={1500}
         zIndex={2}
+        bg="black"
       >
         <Flex
           className="UpperBar"
@@ -114,10 +162,8 @@ const CardStructure = ({ user }: { user: User }) => {
           alignItems="center"
           justifyContent="center"
         >
-          <Box >
-            <Heading>
-                {user.Full_Name}
-            </Heading>
+          <Box>
+            <Heading>{user.Full_Name}</Heading>
           </Box>
         </Flex>
 
@@ -138,9 +184,13 @@ const CardStructure = ({ user }: { user: User }) => {
                 height={60}
               />
             </Box>
-            <Box className="ContentTitleDiv" padding="3px" display="flex"
-                justifyContent="center"
-                alignContent="center">
+            <Box
+              className="ContentTitleDiv"
+              padding="3px"
+              display="flex"
+              justifyContent="center"
+              alignContent="center"
+            >
               <Heading className="ContentTitleText">
                 {user.ContentTitle}
               </Heading>
@@ -159,6 +209,7 @@ const CardStructure = ({ user }: { user: User }) => {
             >
               <Box>
                 <Button
+                  ref={readButtonRef}
                   className={`ReadButton ${
                     activeButtons.includes(0) ? "active" : ""
                   }`}
@@ -166,8 +217,7 @@ const CardStructure = ({ user }: { user: User }) => {
                   style={
                     activeButtons.includes(0) ? activeStyle : inactiveStyle
                   }
-                  width="100%"
-                  zIndex={4}
+                  {...buttonStyles}
                 >
                   <Text>Read</Text>
                 </Button>
@@ -191,6 +241,7 @@ const CardStructure = ({ user }: { user: User }) => {
 
               <Box marginTop={1}>
                 <Button
+                  ref={listenButtonRef}
                   className={`ListenButton ${
                     activeButtons.includes(1) ? "active" : ""
                   }`}
@@ -198,10 +249,9 @@ const CardStructure = ({ user }: { user: User }) => {
                   style={
                     activeButtons.includes(1) ? activeStyle : inactiveStyle
                   }
-                  width="100%"
-                  zIndex={4}
+                  {...buttonStyles}
                 >
-                    <Text>Listen</Text>
+                  <Text>Listen</Text>
                 </Button>
                 <Flex
                   direction="row"
@@ -231,6 +281,7 @@ const CardStructure = ({ user }: { user: User }) => {
 
               <Box marginTop={1}>
                 <Button
+                  ref={watchButtonRef}
                   className={`WatchButton ${
                     activeButtons.includes(2) ? "active" : ""
                   }`}
@@ -238,15 +289,15 @@ const CardStructure = ({ user }: { user: User }) => {
                   style={
                     activeButtons.includes(2) ? activeStyle : inactiveStyle
                   }
-                  width="100%"
-                  zIndex={4}
+                  {...buttonStyles}
                 >
-                    <Text>Watch</Text>
+                  <Text>Watch</Text>
                 </Button>
                 <Flex
                   direction="row"
                   position="relative"
                   marginTop="-40px"
+                  marginBottom={2}
                   width="350px"
                   height="39px"
                   zIndex={2}
@@ -265,7 +316,11 @@ const CardStructure = ({ user }: { user: User }) => {
         </Box>
 
         <Box className="LowerBar" marginTop={5}>
-          <Box className="DonateContactButtons" display="flex" justifyContent="space-evenly">
+          <Box
+            className="DonateContactButtons"
+            display="flex"
+            justifyContent="space-evenly"
+          >
             <Button className="DonateButton">DONATE</Button>
             <Button className="ContactButton">CONTACT</Button>
           </Box>
