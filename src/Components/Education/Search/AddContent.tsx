@@ -20,10 +20,11 @@ const AddContent: React.FC<AddContentProps> = (props) => {
                 <ModalContent backgroundColor="black" border="1px solid #FF8700">
                     <ModalCloseButton />
                     <Flex direction="column" p={4} textAlign="center" justifyContent="center">
-                        <Heading mb={4}>Sign Up</Heading>
+                        <Heading mb={4}>Sign In or Up</Heading>
                         <VStack spacing={2} mb={4}>
                             <Button colorScheme="teal" onClick={() => setLoginMethod('lnurl')}>Login with LNURL</Button>
                             <Button colorScheme="teal" onClick={() => setLoginMethod('email')}>Login with Email</Button>
+                            <Button colorScheme="teal" onClick={() => setLoginMethod('signup')}>Sign Up</Button>
                         </VStack>
                         {loginMethod === 'email' && (
                             <>
