@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { LOGIN_MUTATION } from '../../../GraphQL/Mutations/authMutations'; 
+import { LOGIN_MUTATION, SIGNUP_MUTATION } from '../../../GraphQL/Mutations/authMutations'; 
 import { Box, Button, Modal, ModalOverlay, ModalContent, ModalCloseButton, Icon, Text, Flex, Heading, Input, VStack } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
+
+import { gql } from '@apollo/client';
 
 interface AddContentProps {
     trigger: boolean;
@@ -13,13 +15,28 @@ const AddContent: React.FC<AddContentProps> = (props) => {
     const [loginMethod, setLoginMethod] = React.useState<string | null>(null);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loginError, setLoginError] = useState<string | null>(null);
+    const [signupError, setSignupError] = useState<string | null>(null);
 
-    const [login, { loading, error }] = useMutation(LOGIN_MUTATION, {
+    const [login, { loading }] = useMutation(LOGIN_MUTATION, {
         onCompleted: (data) => {
             console.log('Login Successful', data);
+            setLoginError(null);
         },
         onError: (error) => {
             console.error('Login Error', error.message);
+            setLoginError(error.message);
+        },
+    });
+
+    const [signup, { loading: signupLoading }] = useMutation(SIGNUP_MUTATION, {
+        onCompleted: (data) => {
+            console.log('Signup Successful', data);
+            setSignupError(null);
+        },
+        onError: (error) => {
+            console.error('Signup Error', error.message);
+            setSignupError(error.message);
         },
     });
 
@@ -38,6 +55,23 @@ const AddContent: React.FC<AddContentProps> = (props) => {
         }
     };
 
+    const handleSignup = async (e: React.FormEvent) => {
+        e.preventDefault();
+        try {
+            await signup({
+                variables: {
+                    input: { email, password },
+                },
+            });
+        } catch (error) {
+            if (error instanceof Error) {
+                console.error('Signup Mutation Error', error.message);
+            } else {
+                console.error('Signup Mutation Error', error);
+            }
+        }
+    };
+
     return (
         <>
             <Button variant="unstyled" onClick={() => props.setTrigger(true)}>
@@ -47,7 +81,7 @@ const AddContent: React.FC<AddContentProps> = (props) => {
                 <ModalOverlay />
                 <ModalContent backgroundColor="black" border="1px solid #FF8700" p={4}>
                     <ModalCloseButton />
-                    <Flex as="form" direction="column" p={4} textAlign="center" justifyContent="center" onSubmit={handleLogin}>
+                    <Flex as="form" direction="column" p={4} textAlign="center" justifyContent="center" onSubmit={loginMethod === 'signup' ? handleSignup : handleLogin}>
                         <Heading mb={4}>Sign In or Up</Heading>
                         <VStack spacing={2} mb={4} mt={4}>
                             <Button colorScheme="teal" color="black" onClick={() => setLoginMethod('lnurl')}>Login with LNURL</Button>
@@ -76,10 +110,10 @@ const AddContent: React.FC<AddContentProps> = (props) => {
                                     _placeholder={{ color: "#FF8700" }}
                                 />
                                 <Button type="submit" colorScheme="teal" color="black" mt={2}>Submit</Button>
+                                {loginMethod === 'signup' ? signupError && <p>Error: {signupError}</p> : loginError && <p>Error: {loginError}</p>}
                             </Box>
                         ) : null}
                         {loading && <p>Loading...</p>}
-                        {error && <p>Error: {error.message}</p>}
                     </Flex>
                 </ModalContent>
             </Modal>

@@ -34,6 +34,16 @@ type User {
   Contact: String
 }
 
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+type Mutation {
+  loginUser(email: String!, password: String!): AuthPayload!
+  signup(email: String!, password: String!): AuthPayload!
+}
+
 type Query {
   users: [User]
 }

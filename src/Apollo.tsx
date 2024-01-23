@@ -1,11 +1,10 @@
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { ReactNode } from 'react';
-import { setContext } from '@apollo/client/link/context';
 import { ApolloProvider as ApolloHooksProvider } from '@apollo/react-hooks';
 import { onError } from "@apollo/client/link/error";
 
 // Your GraphQL server endpoint
-const uri = 'http://localhost:4000';
+const uri = 'http://localhost:4000/graphql';
 
 // Create an HTTP link
 const httpLink = createHttpLink({ uri });
