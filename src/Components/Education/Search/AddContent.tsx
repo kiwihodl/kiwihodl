@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_MUTATION, SIGNUP_MUTATION } from '../../../GraphQL/Mutations/authMutations'; 
-import { Box, Button, Modal, ModalOverlay, ModalContent, ModalCloseButton, Icon, Text, Flex, Heading, Input, VStack } from '@chakra-ui/react';
+import { Box, Button, Modal, ModalOverlay, ModalContent, ModalCloseButton, Icon, Flex, Heading, Input, VStack } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
 
 import { gql } from '@apollo/client';
@@ -59,16 +59,10 @@ const AddContent: React.FC<AddContentProps> = (props) => {
         e.preventDefault();
         try {
             await signup({
-                variables: {
-                    input: { email, password },
-                },
+                variables: { email, password },
             });
         } catch (error) {
-            if (error instanceof Error) {
-                console.error('Signup Mutation Error', error.message);
-            } else {
-                console.error('Signup Mutation Error', error);
-            }
+            console.error('Signup Error', error);
         }
     };
 

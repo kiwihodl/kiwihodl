@@ -30,15 +30,10 @@ const resolvers = {
   },
   Mutation: {
     signup: async (_: any, { input }: { input: any }) => {
+      try {
         const { email, password } = input;
         const hashedPassword = await bcrypt.hash(password, 10);
-        const result = await pool.query(
-          "INSERT INTO users (email, password) VALUES ($1, $2) RETURNING *",
-          [email, hashedPassword]
-        );
-        const newUser = result.rows[0];
-
-
+  
         // Check if a user with the given email already exists
         const existingUserResult = await pool.query(
           "SELECT * FROM users WHERE email = $1",
@@ -47,13 +42,24 @@ const resolvers = {
         if (existingUserResult.rows.length > 0) {
           throw new Error("A user with this email already exists");
         }
-
+  
+        const result = await pool.query(
+          "INSERT INTO users (email, password) VALUES ($1, $2) RETURNING *",
+          [email, hashedPassword]
+        );
+        const newUser = result.rows[0];
+  
         // Generate a token for the new user
         const token = generateTokenForUser(newUser);
-
+  
         return { token, user: newUser }; // Return an AuthPayload object
-      },
-      loginUser: async (_: any, { input }: { input: any }) => {
+      } catch (error) {
+        console.error('Signup Error', error);
+        throw error;
+      }
+    },
+    loginUser: async (_: any, { input }: { input: any }) => {
+      try {
         const { email, password } = input;
         const result = await pool.query(
           "SELECT * FROM users WHERE email = $1",
@@ -70,7 +76,11 @@ const resolvers = {
       
         // Return an AuthPayload object
         return { token, user };
-      },
+      } catch (error) {
+        console.error('Login Error', error);
+        throw error;
+      }
+    },
   },
 };
 
@@ -81,7 +91,7 @@ const typeDefs = gql`
 
   type Mutation {
     signup(input: UserInput): AuthPayload
-    loginUser(input: LoginInput): User
+    loginUser(input: LoginInput): AuthPayload
   }
 
   input UserInput {
