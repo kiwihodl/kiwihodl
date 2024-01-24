@@ -39,9 +39,19 @@ type AuthPayload {
   user: User!
 }
 
+input ContentInput {
+  ContentTitle: String
+  ContentParagraph: String
+  Watch: Platforms
+  Listen: Platforms
+  Read: Platforms
+}
+
 type Mutation {
   loginUser(email: String!, password: String!): AuthPayload!
   signup(email: String!, password: String!): AuthPayload!
+  createContent(input: ContentInput!): User!
+  editContent(id: ID!, input: ContentInput!): User!
 }
 
 type Query {
