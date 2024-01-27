@@ -169,6 +169,7 @@ const CardStructure = ({ user }: { user: User }) => {
         width={1500}
         zIndex={2}
         bg="black"
+        overflow={"hidden"}
       >
         <Flex
           className="UpperBar"
