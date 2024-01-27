@@ -165,7 +165,7 @@ const CardStructure = ({ user }: { user: User }) => {
         border="2px solid #FF8700"
         borderRadius="25px"
         p={4}
-        height={660}
+        height={680}
         width={1500}
         zIndex={2}
         bg="black"
