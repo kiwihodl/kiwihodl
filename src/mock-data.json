@@ -14,7 +14,9 @@
         "Watch": {
           "Fiat_Platforms": {
             "Spotify": "link",
-            "ApplePodcasts": "link"
+            "ApplePodcasts": "link",
+            "Youtube": "link",
+            "Odysee": "link"
           },
           "Bitcoin_Platforms": {
             "Sphinx": "link",
@@ -25,7 +27,8 @@
         "Listen": {
           "Fiat_Platforms": {
             "Spotify": "link",
-            "ApplePodcasts": "link"
+            "ApplePodcasts": "link",
+            "Audible": "link"
           },
           "Bitcoin_Platforms": {
             "Sphinx": "link",
@@ -36,7 +39,8 @@
         "Read": {
           "Fiat_Platforms": {
             "Spotify": "link",
-            "ApplePodcasts": "link"
+            "ApplePodcasts": "link",
+            "Medium": "link"
           },
           "Bitcoin_Platforms": {
             "Sphinx": "link",
@@ -101,7 +105,7 @@
         "ID": 3,
         "User": "User3",
         "Category": "Some Category",
-        "Full_Name": "Erik Cason",
+        "Full_Name": "Third Card",
         "Email": "dgrima0@smh.com.au",
         "Verified": true,
         "21Client": true,
@@ -134,7 +138,8 @@
         "Read": {
           "Fiat_Platforms": {
             "Spotify": "link",
-            "ApplePodcasts": "link"
+            "ApplePodcasts": "link",
+            "Medium": "link"
           },
           "Bitcoin_Platforms": {
             "Sphinx": "link",

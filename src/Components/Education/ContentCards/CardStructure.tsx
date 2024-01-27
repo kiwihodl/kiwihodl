@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpotify } from "@fortawesome/free-brands-svg-icons";
+import { faSpotify, faMedium, faAudible, faYoutube, faOdysee } from "@fortawesome/free-brands-svg-icons";
 import Kiwi from "../../../Assets/Logo.jpg";
 import Fountain from "../../../Assets/fountain.jpg";
 import Sphinx from "../../../Assets/sphinx.jpg";
@@ -123,13 +123,22 @@ const CardStructure = ({ user }: { user: User }) => {
     };
   }, []);
 
-  const generatePlatformIcons = (platforms: FiatPlatform | BitcoinPlatform) => {
-    return Object.keys(platforms).map((platform) => {
+  const generatePlatformIcons = (platforms: FiatPlatform | BitcoinPlatform, section: string) => {
+    return Object.entries(platforms).map(([platform, link]) => {
       let icon;
       switch (platform) {
         case "Spotify":
         case "ApplePodcasts":
           icon = <FontAwesomeIcon icon={faSpotify} size="lg" />;
+          break;
+          case "Audible":
+            icon = <FontAwesomeIcon icon={faAudible} size="lg" />;
+            break;
+        case "Medium":
+          icon = <FontAwesomeIcon icon={faMedium} size="lg" />;
+          break;
+        case "Odysee":
+          icon = <FontAwesomeIcon icon={faOdysee} size="lg" />;
           break;
         case "Sphinx":
           icon = <FontAwesomeIcon icon={faSpotify} size="lg" />;
@@ -138,12 +147,17 @@ const CardStructure = ({ user }: { user: User }) => {
         case "Breez":
           icon = <FontAwesomeIcon icon={faSpotify} size="lg" />;
           break;
+        case "Youtube":
+          icon = <FontAwesomeIcon icon={faYoutube} size="lg" />;
+          break;
         default:
           icon = null;
       }
       return icon ? (
         <Box width="8px" height="8px" marginTop="7px">
-          {icon}
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            {icon}
+          </a>
         </Box>
       ) : null;
     });
@@ -238,7 +252,7 @@ const CardStructure = ({ user }: { user: User }) => {
                   {...bitcoinBarStyles}
                 >
                   <Flex className="FiatItemsDiv" justifyContent="space-evenly">
-                    {generatePlatformIcons(user.Read.Fiat_Platforms)}
+                    {generatePlatformIcons(user.Read.Fiat_Platforms, "Read")}
                   </Flex>
                 </Box>
                 <Box {...fiatBarStyles}>
@@ -246,7 +260,7 @@ const CardStructure = ({ user }: { user: User }) => {
                     className="BitcoinContentItems"
                     justifyContent="space-evenly"
                   >
-                    {generatePlatformIcons(user.Read.Bitcoin_Platforms)}
+                    {generatePlatformIcons(user.Read.Bitcoin_Platforms, "Read")}
                   </Flex>
                 </Box>
               </Flex>
@@ -276,7 +290,7 @@ const CardStructure = ({ user }: { user: User }) => {
                  {...bitcoinBarStyles}
                 >
                   <Flex className="FiatItemsDiv" justifyContent="space-evenly">
-                    {generatePlatformIcons(user.Listen.Fiat_Platforms)}
+                    {generatePlatformIcons(user.Listen.Fiat_Platforms, "Listen")}
                   </Flex>
                 </Box>
                 <Box {...fiatBarStyles}>
@@ -284,7 +298,7 @@ const CardStructure = ({ user }: { user: User }) => {
                     className="BitcoinContentItems"
                     justifyContent="space-evenly"
                   >
-                    {generatePlatformIcons(user.Listen.Bitcoin_Platforms)}
+                    {generatePlatformIcons(user.Listen.Bitcoin_Platforms, "Listen")}
                   </Flex>
                 </Box>
               </Flex>
@@ -315,7 +329,7 @@ const CardStructure = ({ user }: { user: User }) => {
                   {...bitcoinBarStyles}
                 >
                   <Flex className="FiatItemsDiv" justifyContent="space-evenly">
-                    {generatePlatformIcons(user.Watch.Fiat_Platforms)}
+                    {generatePlatformIcons(user.Watch.Fiat_Platforms, "Watch")}
                   </Flex>
                 </Box>
                 <Box {...fiatBarStyles}>
@@ -323,7 +337,7 @@ const CardStructure = ({ user }: { user: User }) => {
                     className="BitcoinContentItems"
                     justifyContent="space-evenly"
                   >
-                    {generatePlatformIcons(user.Watch.Bitcoin_Platforms)}
+                    {generatePlatformIcons(user.Watch.Bitcoin_Platforms, "Watch")}
                   </Flex>
                 </Box>
               </Flex>

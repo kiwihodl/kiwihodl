@@ -9,6 +9,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "jsx": "react-jsx",
+    "resolveJsonModule": true,
     "paths": {
       "*": [
         "node_modules/*"
