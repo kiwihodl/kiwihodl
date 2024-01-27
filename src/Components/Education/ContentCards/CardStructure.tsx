@@ -5,6 +5,7 @@ import { faSpotify, faMedium, faAudible, faYoutube, faOdysee } from "@fortawesom
 import Kiwi from "../../../Assets/Logo.jpg";
 import Fountain from "../../../Assets/fountain.jpg";
 import Sphinx from "../../../Assets/sphinx.jpg";
+import BitcoinMagazine from "../../../Assets/BitcoinMagazine.jpg"
 
 interface FiatPlatform {
   Spotify: string;
@@ -86,6 +87,21 @@ const bitcoinBarStyles = {
   marginTop: "-8px",
 };
 
+const imageStyles: React.CSSProperties = {
+  marginTop: "7px",
+  padding: "none",
+  width: "20px",
+  height: "20px",
+  objectFit: "contain",
+};
+
+const iconStyles: React.CSSProperties = {
+  marginTop: "7px",
+  width: "20px",
+  height: "20px",
+  
+};
+
 const CardStructure = ({ user }: { user: User }) => {
   const [activeButtons, setActiveButtons] = useState<number[]>([]);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -129,32 +145,35 @@ const CardStructure = ({ user }: { user: User }) => {
       switch (platform) {
         case "Spotify":
         case "ApplePodcasts":
-          icon = <FontAwesomeIcon icon={faSpotify} size="lg" />;
+          icon = <FontAwesomeIcon icon={faSpotify} size="lg" style={iconStyles} />;
           break;
           case "Audible":
-            icon = <FontAwesomeIcon icon={faAudible} size="lg" />;
+            icon = <FontAwesomeIcon icon={faAudible} size="lg" style={iconStyles} />;
+            break;
+          case "BitcoinMagazine":
+            icon = <img src={BitcoinMagazine} style={imageStyles} alt="Bitcoin Magazine" />
             break;
         case "Medium":
-          icon = <FontAwesomeIcon icon={faMedium} size="lg" />;
+          icon = <FontAwesomeIcon icon={faMedium} size="lg" style={iconStyles} />;
           break;
         case "Odysee":
-          icon = <FontAwesomeIcon icon={faOdysee} size="lg" />;
+          icon = <FontAwesomeIcon icon={faOdysee} size="lg" style={iconStyles} />;
           break;
         case "Sphinx":
-          icon = <FontAwesomeIcon icon={faSpotify} size="lg" />;
+          icon = <FontAwesomeIcon icon={faSpotify} size="lg" style={iconStyles} />;
           break;
         case "Fountain":
         case "Breez":
-          icon = <FontAwesomeIcon icon={faSpotify} size="lg" />;
+          icon = <FontAwesomeIcon icon={faSpotify} size="lg" style={iconStyles} />;
           break;
         case "Youtube":
-          icon = <FontAwesomeIcon icon={faYoutube} size="lg" />;
+          icon = <FontAwesomeIcon icon={faYoutube} size="lg" style={iconStyles} />;
           break;
         default:
           icon = null;
       }
       return icon ? (
-        <Box width="8px" height="8px" marginTop="7px">
+        <Box>
           <a href={link} target="_blank" rel="noopener noreferrer">
             {icon}
           </a>
