@@ -45,7 +45,7 @@ I'm A Junior Software Engineer
 
 <div align="center">
 <a href="[https://twitter.com/newzealandhodl/]"><img src="https://img.shields.io/badge/Telegram-26A5E4.svg?style=for-the-badge&logo=telegram&logoColor=26A5E4&labelColor=ffffff" alt="Telegram"></a>
-<a href="[https://twitter.com/newzealandhodl/]"><img src="https://img.shields.io/badge/Twitter-1DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=1DA1F2&labelColor=ffffff" alt="Twitter"></a>
+<a href="https://twitter.com/newzealandhodl"><img src="https://img.shields.io/badge/Twitter-1DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=1DA1F2&labelColor=ffffff" alt="Twitter"></a>
 <a href="https://keybase.io/kiwi_"><img src="https://img.shields.io/badge/Keybase-33A0FF.svg?style=for-the-badge&logo=keybase&logoColor=33A0FF&labelColor=ffffff" alt="Keybase"></a> 
                                                                                    </div>
 
