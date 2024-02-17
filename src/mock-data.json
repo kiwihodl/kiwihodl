@@ -145,7 +145,8 @@
           "Bitcoin_Platforms": {
             "Sphinx": "link",
             "Fountain": "link",
-            "Breez": "link"
+            "Breez": "link",
+            "Ghost": "link"
           }
         },
         "Donate": "1BL8r9KC8GUZbUSYWZmTDNcxJK71sijdVT",

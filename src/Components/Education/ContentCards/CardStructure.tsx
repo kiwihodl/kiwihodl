@@ -5,7 +5,8 @@ import { faSpotify, faMedium, faAudible, faYoutube, faOdysee } from "@fortawesom
 import Kiwi from "../../../Assets/Logo.jpg";
 import Fountain from "../../../Assets/fountain.jpg";
 import Sphinx from "../../../Assets/sphinx.jpg";
-import BitcoinMagazine from "../../../Assets/BitcoinMagazine.jpg"
+import BitcoinMagazine from "../../../Assets/BitcoinMagazine.jpg";
+import Ghost from "../../../Assets/ghostLogo.png";
 
 interface FiatPlatform {
   Spotify: string;
@@ -152,6 +153,9 @@ const CardStructure = ({ user }: { user: User }) => {
             break;
           case "BitcoinMagazine":
             icon = <img src={BitcoinMagazine} style={imageStyles} alt="Bitcoin Magazine" />
+            break;
+          case "Ghost":
+            icon = <img src={Ghost} style={imageStyles} alt="Ghost Blogs" />;
             break;
         case "Medium":
           icon = <FontAwesomeIcon icon={faMedium} size="lg" style={iconStyles} />;
