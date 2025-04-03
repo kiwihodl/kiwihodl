@@ -7,8 +7,6 @@ I'm A Junior Software Engineer
 ------------------------
  </div>
 
-<br/>
-
 <div align="center">
  
  <a>
