@@ -5,14 +5,6 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 
 I'm A Software Engineer
 ------------------------
- 
- </div><br/>
-
-<div align="center">
-<a>
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kiwihodl&layout=compact&theme=radical" />
-</a>
-</div>
   
 <div> <br/> </div>
 
