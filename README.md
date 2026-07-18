@@ -82,11 +82,11 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 
 <p align="center">
 
-<img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logoColor=white" alt="Claude">
+<img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge" alt="Claude">
 
-<img src="https://img.shields.io/badge/Anthropic-191919?style=for-the-badge&logoColor=white" alt="Anthropic">
+<img src="https://img.shields.io/badge/Anthropic-191919?style=for-the-badge" alt="Anthropic">
 
-<img src="https://img.shields.io/badge/Model_Context_Protocol-4F46E5?style=for-the-badge&logoColor=white" alt="Model Context Protocol">
+<img src="https://img.shields.io/badge/Model_Context_Protocol-4F46E5?style=for-the-badge" alt="MCP">
 
 <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI">
 
@@ -105,6 +105,10 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 <img src="https://img.shields.io/badge/React%20Testing%20Library-E33332?style=for-the-badge&logo=testinglibrary&logoColor=white" alt="React Testing Library">
 
 <img src="https://img.shields.io/badge/Chrome%20DevTools-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Chrome DevTools">
+
+<img src="https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="pytest">
+
+<img src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest">
 
 </p>
 
