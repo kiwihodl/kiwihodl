@@ -14,20 +14,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 
 ---
 
-<div align="center">
-
-<a href="https://www.linkedin.com/in/ben-jarvie/">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
-
-<a href="https://www.bitcoinbutlers.com">
-<img src="https://img.shields.io/badge/Bitcoin%20Butlers-F7931A?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Bitcoin Butlers">
-</a>
-
-</div>
-
----
-
 <h2 align="center">Languages</h2>
 
 <p align="center">
@@ -137,6 +123,22 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
 
 </p>
+
+---
+
+<h2 align="center">Contact</h2>
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/ben-jarvie/">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+
+<a href="https://www.bitcoinbutlers.com">
+<img src="https://img.shields.io/badge/Bitcoin%20Butlers-F7931A?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Bitcoin Butlers">
+</a>
+
+</div>
 
 ---
 
