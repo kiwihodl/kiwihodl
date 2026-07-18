@@ -24,10 +24,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 <img src="https://img.shields.io/badge/Bitcoin%20Butlers-F7931A?style=for-the-badge&logo=bitcoin&logoColor=white" alt="Bitcoin Butlers">
 </a>
 
-<a href="https://keybase.io/kiwi_">
-<img src="https://img.shields.io/badge/Keybase-33A0FF?style=for-the-badge&logo=keybase&logoColor=white" alt="Keybase">
-</a>
-
 </div>
 
 ---
