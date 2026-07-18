@@ -144,6 +144,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 
 <p align="center">
 
-🧠 Claude & Anthropic APIs • 🤖 AI Agents • 🔌 Model Context Protocol (MCP) • ₿ Bitcoin Infrastructure • 🌐 Nostr • 🔐 Self-Custody • 🚀 Open Source
+Claude & Anthropic APIs • AI Agents • Model Context Protocol (MCP) • ₿itcoin Infrastructure • NOSTR • Self-Custody • Open Source
 
 </p>
