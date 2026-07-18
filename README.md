@@ -12,8 +12,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 
 <p align="center">If you have any questions, whether work related or you just want to ask something about my code, please feel free to reach out via one of the methods below!</p><br/>
 
----
-
 <h2 align="center">Languages</h2>
 
 <p align="center">
@@ -28,8 +26,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 
 </p>
 
----
-
 <h2 align="center">Frontend</h2>
 
 <p align="center">
@@ -41,8 +37,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
 
 </p>
-
----
 
 <h2 align="center">Backend</h2>
 
@@ -57,8 +51,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
 
 </p>
-
----
 
 <h2 align="center">AI</h2>
 
@@ -76,8 +68,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 
 </p>
 
----
-
 <h2 align="center">Testing</h2>
 
 <p align="center">
@@ -93,8 +83,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 <img src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest">
 
 </p>
-
----
 
 <h2 align="center">DevOps & Cloud</h2>
 
@@ -114,8 +102,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 
 </p>
 
----
-
 <h2 align="center">Design</h2>
 
 <p align="center">
@@ -123,8 +109,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
 
 </p>
-
----
 
 <h2 align="center">Contact</h2>
 
@@ -139,8 +123,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 </a>
 
 </div>
-
----
 
 <h2 align="center">Currently Focused On</h2>
 
