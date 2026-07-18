@@ -18,7 +18,6 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
 
 <a href="https://www.linkedin.com/in/ben-jarvie/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=0A66C2&labelColor=ffffff" alt="LinkedIn"></a>
 <a href="https://www.bitcoinbutlers.com"><img src="https://img.shields.io/badge/Bitcoin%20Butlers-F7931A?style=for-the-badge&logo=bitcoin&logoColor=F7931A&labelColor=ffffff" alt="Bitcoin Butlers"></a>
-<a href="https://keybase.io/kiwi_"><img src="https://img.shields.io/badge/Keybase-33A0FF?style=for-the-badge&logo=keybase&logoColor=33A0FF&labelColor=ffffff" alt="Keybase"></a>
 
 </div>
 
