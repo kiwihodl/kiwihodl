@@ -8,18 +8,9 @@ Software Engineer • AI Engineer • Bitcoin Infrastructure • Quality Assuran
   
 <div> <br/> </div>
 
-<p align="center"> Specializing in AI-powered developer tools, Bitcoin and NOSTR infrastructure, self-custody software + education, and intelligent automation. My focus is on shipping production-ready applications using TypeScript, Python, React, FastAPI, Prisma, Claude, Model Context Protocol (MCP), and modern cloud tooling.
+<p align="left"> Specializing in AI-powered developer tools, Bitcoin and NOSTR infrastructure, self-custody software + education, and intelligent automation. My focus is on shipping production-ready applications using TypeScript, Python, React, FastAPI, Prisma, Claude, Model Context Protocol (MCP), and modern cloud tooling.
 
 <p align="center">If you have any questions, whether work related or you just want to ask something about my code, please feel free to reach out via one of the methods below!</p><br/>
-
-
-
-<div align="left">
-
-<a href="https://www.linkedin.com/in/ben-jarvie/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=0A66C2&labelColor=ffffff" alt="LinkedIn"></a>
-<a href="https://www.bitcoinbutlers.com"><img src="https://img.shields.io/badge/Bitcoin%20Butlers-F7931A?style=for-the-badge&logo=bitcoin&logoColor=F7931A&labelColor=ffffff" alt="Bitcoin Butlers"></a>
-
-</div>
 
 ---
 
